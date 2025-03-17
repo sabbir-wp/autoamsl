@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-4xl bg-white shadow-lg rounded-lg flex flex-col md:flex-row">
+        <div class="md:w-1/2 p-8">
+            <div class="flex justify-center mb-4">
+                <img src="img/logo.svg" alt="Logo" class="h-10">
+            </div>
+            <h2 class="text-2xl font-bold mb-4 text-center">Login</h2>
+            <form id="login-form">
+                <div class="mb-4">
+                    <label class="block text-gray-700">Email</label>
+                    <input id="login-email" type="email" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300" placeholder="Enter email">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Password</label>
+                    <input id="login-password" type="password" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300" placeholder="Enter password">
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">Login</button>
+            </form>
+            <div class="text-center mt-4">
+                <button class="w-full flex items-center justify-center bg-red-500 text-white py-2 rounded-lg hover:bg-red-600">
+                    <img src="img/google.svg" alt="Google" class="h-5 mr-2"> Login with Google
+                </button>
+            </div>
+            <p class="text-center text-gray-600 mt-4">Not registered? <a href="signup.html" class="text-blue-500">Create an account</a></p>
+        </div>
+        <div class="hidden md:flex w-1/2 bg-green-100 items-center justify-center">
+            <img src="img/statistics.png" alt="Login Illustration" class="w-3/4">
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Handle login form submission
+            $('#login-form').submit(function(e) {
+                e.preventDefault();
+                let email = $('#login-email').val();
+                let password = $('#login-password').val();
+
+                if (!email || !password) {
+                    alert('Both fields are required!');
+                    return;
+                }
+
+                // Simulate successful login
+                alert('Login Successful');
+                // Redirect to dashboard after successful login
+                window.location.href = "dashboard.html"; // Redirect to dashboard page
+            });
+        });
+    </script>
+</body>
+</html>

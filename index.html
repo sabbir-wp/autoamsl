@@ -1,0 +1,693 @@
+<!doctype html>
+<html class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="60x60" href="img/Group 39771.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Swiper Styles -->
+  <link rel="stylesheet" href="font/css/all.css" />
+  <!-- Include Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="src/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-white text-black  dark:text-white">
+
+  <header class="absolute inset-x-0 top-0 z-50 ">
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <!-- Logo -->
+      <div class="flex lg:flex-1 lg:justify-center">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">AutomateLI</span>
+          <img class="h-8 w-auto" src="img/logo.svg" alt="Logo">
+        </a>
+      </div>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="#"
+          class="relative text-gray-900 font-semibold hover:text-blue-500 after:content-[''] after:absolute after:left-0 after:bottom-[-30px] after:w-0 after:h-[2px] after:bg-[#8ADDC1] after:transition-all after:duration-300 hover:after:w-full">How
+          it works</a>
+        <a href="#"
+          class="relative text-gray-900 font-semibold hover:text-blue-500 after:content-[''] after:absolute after:left-0 after:bottom-[-30px] after:w-0 after:h-[2px] after:bg-[#8ADDC1] after:transition-all after:duration-300 hover:after:w-full ">Testimonials</a>
+        <a href="#"
+          class="relative text-gray-900 font-semibold hover:text-blue-500 after:content-[''] after:absolute after:left-0 after:bottom-[-30px] after:w-0 after:h-[2px] after:bg-[#8ADDC1] after:transition-all after:duration-300 hover:after:w-full">Pricing</a>
+        <a href="#"
+          class="relative text-gray-900 font-semibold hover:text-blue-500 after:content-[''] after:absolute after:left-0 after:bottom-[-30px] after:w-0 after:h-[2px] after:bg-[#8ADDC1] after:transition-all after:duration-300 hover:after:w-full">Company</a>
+      </div>
+
+
+      <!-- Sign In & Sign Up (Desktop) -->
+      <div class="hidden lg:flex lg:flex-1 lg:justify-center space-x-5">
+        <a href="login.html" class="p-3  text-black font-semibold hover:text-blue-500 rounded-lg">Sign In</a>
+        <a class="bg-sky-500 p-3 text-white rounded-lg hover:bg-sky-700" href="signup.html">Sign Up</a>
+      </div>
+
+
+      <!-- Mobile Menu Button -->
+      <div class="lg:hidden">
+        <button id="mobile-menu-button" class="p-2 text-gray-700 focus:outline-none">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by Default) -->
+    <div id="mobile-menu"
+      class="fixed inset-0 z-50 w-full bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 hidden">
+      <div class="flex items-center justify-between">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">AutomateLI</span>
+          <img class="h-8 w-auto" src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+            alt="Logo">
+        </a>
+        <button id="close-menu" class="p-2 text-gray-700 focus:outline-none">
+          <span class="sr-only">Close menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Links -->
+      <div class="mt-6 space-y-4">
+        <a href="#" class="block text-lg font-semibold text-gray-900 hover:bg-gray-100 p-3 rounded-lg">How it works</a>
+        <a href="#" class="block text-lg font-semibold text-gray-900 hover:bg-gray-100 p-3 rounded-lg">Testimonials</a>
+        <a href="#" class="block text-lg font-semibold text-gray-900 hover:bg-gray-100 p-3 rounded-lg">Pricing</a>
+        <a href="#" class="block text-lg font-semibold text-gray-900 hover:bg-gray-100 p-3 rounded-lg">Company</a>
+      </div>
+
+      <!-- Sign In & Sign Up (Mobile) -->
+      <div class="mt-6">
+        <a href="login.html" class="p-3  text-black font-semibold hover:text-blue-500 rounded-lg">Sign In</a>
+        <a class="bg-sky-500 p-3 text-white rounded-lg hover:bg-sky-700" href="signup.html">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Hero Section -->
+  <div class="relative bg-[url('/img/hero-bg.png')] bg-cover bg-center bg-no-repeat">
+    <div class="mx-auto max-w-3xl pt-24 sm:pt-40 lg:pt-78 text-center px-6">
+      <h1 class="font-bold text-gradient-to-r from-green-400 to-blue-500 text-[#00364F] bg-clip-text  lg:text-5xl md:text-3xl  sm:text-3xl ">
+        Grow your business with AutomateLI Ads Management
+      </h1>
+      <p class="mt-10 lg:text-2xl md:text-lg sm:text-xs text-gray-600 ">
+        Betterlance delivers a guaranteed number of high-quality new leads every month, combined with the sales tools to
+        convert them into paying clients.
+      </p>
+      <div class="mt-8 sm:mb-32">
+        <a href="#"
+          class="inline-block bg-[#00364F] text-white lg:px-6 lg:py-3 md:px-4 md:py-3 sm:px-4 sm:py-3 rounded-lg lg:text-lg md:text-lg font-semibold hover:bg-[#3a64ed] transition sm:text-1xl">
+          Get started for free &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="flex justify-center lg:-mt-80 md:-mt-50 sm:-mt-50">
+      <img class="w-full max-w-8xl h-auto object-cover" src="img/Group 38715.png" alt="Dashboard Preview">
+    </div>
+  </div>
+
+  <!-- Trusted Brands Section for Desktop -->
+  <div class="bg-white py-16 sm:py-24 lg:block hidden">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <h2 class="text-center text-lg font-semibold text-gray-500">Trusted by leading brands</h2>
+      <div
+        class="mx-auto mt-10 grid max-w-lg grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-10 sm:max-w-xl lg:mx-0 lg:max-w-none">
+        <img class="object-contain transition-transform duration-300 hover:scale-110" src="img/Group 39013.webp"
+          alt="Google" width="155" height="48">
+        <img class="object-contain transition-transform duration-300 hover:scale-110" src="img/Group 39014.webp"
+          alt="Microsoft" width="155" height="48">
+        <img class="object-contain transition-transform duration-300 hover:scale-110" src="img/Group 39015.webp"
+          alt="Spotify" width="155" height="48">
+        <img class="object-contain transition-transform duration-300 hover:scale-110" src="img/Group 39016.png"
+          alt="Slack" width="155" height="48">
+        <img class="object-contain transition-transform duration-300 hover:scale-110" src="img/Group 39013.webp"
+          alt="Vonyx" width="155" height="48">
+        <img class="object-contain transition-transform duration-300 hover:scale-110" src="img/Group 39014.webp"
+          alt="Vony" width="155" height="48">
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Trusted Brands Section for Mobile (Swiper Slider) -->
+  <div class="bg-white py-16 sm:py-24 lg:hidden">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <h2 class="text-center text-lg font-semibold text-gray-500">Trusted by leading brands</h2>
+
+      <!-- Swiper Container -->
+      <div class="swiperlogo mt-10">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="object-contain transition-transform duration-300 hover:scale-110" src="img/Group 39013.webp"
+              alt="Google" width="158" height="48">
+          </div>
+          <div class="swiper-slide">
+            <img class="object-contain transition-transform duration-300 hover:scale-110" src="img/Group 39014.webp"
+              alt="Microsoft" width="158" height="48">
+          </div>
+          <div class="swiper-slide">
+            <img class="object-contain transition-transform duration-300 hover:scale-110" src="img/Group 39015.webp"
+              alt="Spotify" width="158" height="48">
+          </div>
+          <div class="swiper-slide">
+            <img class="object-contain transition-transform duration-300 hover:scale-110" src="img/Group 39016.png"
+              alt="Slack" width="158" height="48">
+          </div>
+          <div class="swiper-slide">
+            <img class="object-contain transition-transform duration-300 hover:scale-110" src="img/Group 39013.webp"
+              alt="Vonyx" width="158" height="48">
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- <div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <h2 class="text-center text-lg/8 font-semibold text-gray-900">Trusted by the world’s most innovative teams</h2>
+    <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/google.svg" alt="Transistor" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/microsoft_logo.svg" alt="Reform" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/spotifyVector.svg" alt="Tuple" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="img/slack.svg" alt="SavvyCal" width="158" height="48">
+      <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="img/vonyx.svg" alt="Statamic" width="158" height="48">
+    </div>
+  </div>
+</div>
+
+
+<div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <h2 class="text-center text-lg/8 font-semibold text-gray-900">Trusted by the world’s most innovative teams</h2>
+    <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48">
+      <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48">
+    </div>
+  </div>
+</div> -->
+
+
+
+<section class="bg-white py-24 sm:py-32 bg-image-curciel bg-cover bg-center">
+  <div class="text-center flex flex-col items-center px-6 z-40">
+    
+
+    <h2 class="font-bold text-gray-800 lg:text-3xl mt-4 md:mt-6 sm:text-1xl">
+      Over <span class="text-green-400">80K+</span> people trusted us
+    </h2>
+
+    <!-- Testimonial Card -->
+    <div class="mt-16 flex justify-center lg:-mb-30 md:-mb-30 sm:-mb-30">
+      <div class="bg-pink-100 p-8 rounded-2xl shadow-lg max-w-xl sm:max-w-2xl md:max-w-3xl text-center z-40">
+        <!-- Profile Image -->
+        <div class="flex justify-center -mt-16">
+          <img src="img/profile.png" alt="John Doe"
+            class="w-24 h-24 rounded-full border-4 border-white shadow-lg">
+        </div>
+
+        <!-- Quote -->
+        <blockquote class="mt-6 text-lg text-gray-700 leading-relaxed">
+          "Aliqua id fugiat nostrud irure ex duis ea quisquise oad et. Sunt qui esse pariatur duis deserunt mollit
+          dolore."
+        </blockquote>
+
+        <!-- Author Info -->
+        <p class="mt-4 font-bold text-gray-900 text-xl">John Doe</p>
+        <span class="text-sm text-gray-600">CEO at Design Studio</span>
+      </div>
+    </div>
+ 
+  </div>
+</section>
+
+
+
+  <!-- <section class="bg-white py-24 sm:py-32 bg-image-curciel">
+  <div class="text-center relative  bottom-0 top-100">
+    <h2 class="font-bold text-gray-800 text-3xl sm:text-4xl">
+      Over <span class="text-green-500">80K+</span> people trusted us
+    </h2>
+
+    <div class="flex justify-center mt-12">
+      <div class="bg-pink-100 p-8 rounded-2xl shadow-xl max-w-2xl text-center relative">
+        
+      
+        <div class="absolute -top-12 left-1/2 transform -translate-x-1/2">
+          <img src="img/Group 38535.png" alt="John Doe" class="w-24 h-24 rounded-full border-4 border-white shadow-lg">
+        </div>
+
+        <blockquote class="mt-12 text-lg text-gray-700">
+          "Aliqua id fugiat nostrud irure ex duis ea quisquise oad et. Sunt qui esse pariatur duis deserunt mollit
+          dolore."
+        </blockquote>
+
+        <p class="mt-4 font-bold text-gray-900 text-lg">John Doe</p>
+        <span class="text-sm text-gray-600">CEO at Design Studio</span>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+  <section class="bg-gray-100">
+    <div class="max-w-6xl mx-auto py-16 px-6 lg:px-12">
+
+
+      <h2 class="text-3xl font-bold text-gray-900 text-center">How it works</h2>
+      <p class="text-gray-600 mt-2 text-center">
+        Aliquam erat volutpat curabitur fringilla in purus eget egestas etiam quis.
+      </p>
+
+      <div class="grid gap-12 md:gap-16 mt-12 sm:text-align-left">
+        <!-- First Item -->
+        <div class="flex flex-col md:flex-row lg:items-center  md:text-left sm:text-left ">
+          <img src="img/signup.png" alt="Sign Up" class="rounded-lg shadow-lg w-full max-w-md md:w-1/2">
+          <div class="mt-6 md:mt-10 sm:mt-10 md:ml-12 px-6 max-w-lg">
+            <h3 class="text-xl font-semibold text-gray-900">
+              Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            </h3>
+            <p class="text-gray-600 mt-2 text-sm">
+              Duis ac augue ut lectus congue luctus. Vivamus eu lacus vestibulum, luctus ante dignissim.
+            </p>
+            <a href="#" class="text-red-500 font-semibold mt-2 inline-block">Get started for free →</a>
+          </div>
+        </div>
+
+        <!-- Second Item -->
+        <div class="flex flex-col md:flex-row-reverse lg:items-center  md:text-left sm:text-left">
+          <img src="img/add rule.png" alt="Add Rule" class="rounded-lg shadow-lg w-full max-w-md md:w-1/2">
+          <div class="mt-6 md:mt-10 sm:mt-10 md:mr-12 px-6 max-w-lg">
+            <h3 class="text-xl font-semibold text-gray-900">
+              Ad curabitur donec posuere risus faucibus sodales
+            </h3>
+            <p class="text-gray-600 mt-2 text-sm">
+              Duis ac augue ut lectus congue luctus. Vivamus eu lacus vestibulum.
+            </p>
+            <a href="#" class="text-red-500 font-semibold mt-2 inline-block">Get started for free →</a>
+          </div>
+        </div>
+
+        <!-- Third Item -->
+        <div class="flex flex-col md:flex-row ilg:items-center  md:text-left sm:text-left">
+          <img src="img/statistics.png" alt="Statistics" class="rounded-lg shadow-lg w-full max-w-md md:w-1/2">
+          <div class="mt-6 md:mt-10 sm:mt-10 md:ml-12 px-6 max-w-lg">
+            <h3 class="text-xl font-semibold text-gray-900">
+              Ad curabitur donec posuere risus faucibus sodales
+            </h3>
+            <p class="text-gray-600 mt-2 text-sm">
+              Impact investing and best practices co-create natural resources.
+            </p>
+            <a href="#" class="text-red-500 font-semibold mt-2 inline-block">Get started for free →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="relative isolate bg-white lg:block hidden">
+
+    <div class=" px-6 py-24 sm:py-32 lg:px-">
+
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="mt-2 lg:text-6xl font-semibold tracking-tight text-gray-900 md:text-2xl sm:text-1xl">Pricing that scales</p>
+        <p class="mx-auto mt-6 max-w-2xl text-lg font-medium text-gray-600 sm:text-xl">
+          Donec libero ipsum, bibendum et tristique quis, convallis eu quam
+        </p>
+      </div>
+
+      <div class="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-6 sm:mt-20 lg:max-w-6xl lg:grid-cols-3">
+        <!-- Pricing Plans -->
+        <div
+          class="relative rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/10 sm:p-10 transition-transform duration-300 hover:scale-110">
+          <h3 class="text-base font-semibold text-red-300">Free</h3>
+          <p class="mt-4 flex items-baseline gap-x-2">
+            <span class="text-5xl font-semibold tracking-tight text-gray-800">$0</span>
+            <span class="text-base text-gray-700">/month</span>
+          </p>
+          <p class="mt-6 text-base text-gray-800">Ideal for individuals and small teams.</p>
+          <hr class="my-6 border-gray-200">
+          <ul class="mt-8 space-y-3 text-sm text-gray-700">
+            <li><i class="fa-solid fa-circle-check text-green-300"></i>Priority Support</li>
+            <li> <i class="fa-solid fa-circle-check  text-green-300"></i>5 Products</li>
+            <li><i class="fa-solid fa-circle-check  text-green-300"></i> 1,000 Subscribers</li>
+            <li><i class="fa-solid fa-circle-check  text-green-300"></i> Basic Analytics</li>
+            <li><i class="fa-solid fa-circle-check  text-green-300"></i> Email Support</li>
+            <li><i class="fa-solid fa-circle-check  text-green-300"></i> Basic Analytics</li>
+            <li> <i class="fa-solid fa-circle-check text-green-300"></i>Email Support</li>
+            <li> <i class="fa-regular fa-circle-xmark  text-red-300"></i>Email Support</li>
+          </ul>
+          <a href="#"
+            class="mt-8 block rounded-4xl bg-red-300 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 justify-end">Get
+            started</a>
+        </div>
+
+        <div
+          class="relative rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/10 sm:p-10 transition-transform duration-300 hover:scale-110">
+          <h3 class="text-base font-semibold text-sky-300">Pro</h3>
+          <p class="mt-4 flex items-baseline gap-x-2">
+            <span class="text-5xl font-semibold tracking-tight text-gray-800">$48.00</span>
+            <span class="text-base text-gray-700">/month</span>
+          </p>
+          <p class="mt-6 text-base text-gray-800">Great for growing businesses.</p>
+          <hr class="my-6 border-gray-200">
+          <ul class="mt-8 space-y-3 text-sm text-gray-700">
+            <li><i class="fa-solid fa-circle-check text-green-300"></i>50 Products</li>
+            <li><i class="fa-solid fa-circle-check text-green-300"></i>10,000 Subscribers</li>
+            <li><i class="fa-solid fa-circle-check text-green-300"></i> Advanced Analytics</li>
+            <li><i class="fa-solid fa-circle-check text-green-300"></i>Priority Support</li>
+            <li><i class="fa-solid fa-circle-check text-green-300"></i>Advanced Analytics</li>
+            <li><i class="fa-solid fa-circle-check text-green-300"></i>Priority Support</li>
+            <li> <i class="fa-regular fa-circle-xmark  text-red-300"></i>Email Support</li>
+            <li> <i class="fa-regular fa-circle-xmark  text-red-300"></i>Email Support</li>
+          </ul>
+          <a href="#"
+            class="mt-8 block rounded-4xl bg-sky-300 px-4 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 ">Get
+            started</a>
+        </div>
+
+        <div
+          class="relative rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/10 sm:p-10 transition-transform duration-300 hover:scale-110">
+          <h3 class="text-base font-semibold text-green-300 ">Enterprise</h3>
+          <p class="mt-4 flex items-baseline gap-x-2">
+            <span class="text-5xl font-semibold tracking-tight text-gray-800">$98.00</span>
+            <span class="text-base text-gray-700">/month</span>
+          </p>
+          <p class="mt-6 text-base text-gray-800">Dedicated support and infrastructure for large businesses.</p>
+          <hr class="my-6 border-gray-200">
+          <ul class="mt-8 space-y-3 text-sm text-gray-700">
+            <li><i class="fa-solid fa-circle-check text-green-300"></i> Unlimited Products</li>
+            <li><i class="fa-solid fa-circle-check text-green-300"></i>Unlimited Subscribers</li>
+            <li><i class="fa-solid fa-circle-check text-green-300"></i>Advanced Analytics & Automations</li>
+            <li><i class="fa-solid fa-circle-check text-green-300"></i>Dedicated Support Representative</li>
+            <li><i class="fa-solid fa-circle-check text-green-300"></i>Priority Support</li>
+            <li><i class="fa-solid fa-circle-check text-green-300"></i>Advanced Analytics</li>
+            <li><i class="fa-solid fa-circle-check text-green-300"></i>Priority Support</li>
+          </ul>
+          <a href="#"
+            class="mt-8 block rounded-4xl bg-green-300 px-4 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400">Get
+            started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="relative isolate bg-white  lg:hidden">
+    <div class="px-6 py-24 sm:py-32 lg:px-8">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="mt-2 text-3xl font-semibold tracking-tight text-gray-900 sm:text-6xl">Pricing that scales</p>
+        <p class="mx-auto mt-6 max-w-2xl text-lg font-medium text-gray-600 sm:text-xl">
+          Donec libero ipsum, bibendum et tristique quis, convallis eu quam
+        </p>
+      </div>
+
+      <!-- Swiper Container -->
+      <div class="swiper mt-10">
+        <div class="swiper-wrapper">
+          <!-- Pricing Plan 1 -->
+          <div class="swiper-slide p-4">
+            <div
+              class="relative rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/10 sm:p-10 transition-transform duration-300 hover:scale-110">
+              <h3 class="text-base font-semibold text-red-300">Free</h3>
+              <p class="mt-4 flex items-baseline gap-x-2">
+                <span class="text-5xl font-semibold tracking-tight text-gray-800">$0</span>
+                <span class="text-base text-gray-700">/month</span>
+              </p>
+              <p class="mt-6 text-base text-gray-800">Ideal for individuals and small teams.</p>
+              <hr class="my-6 border-gray-200">
+              <ul class="mt-8 space-y-3 text-sm text-gray-700">
+                <li><i class="fa-solid fa-circle-check text-green-300"></i> Priority Support</li>
+                <li><i class="fa-solid fa-circle-check text-green-300"></i> 5 Products</li>
+                <li><i class="fa-solid fa-circle-check text-green-300"></i> 1,000 Subscribers</li>
+                <li><i class="fa-solid fa-circle-check  text-green-300"></i> Basic Analytics</li>
+                <li><i class="fa-solid fa-circle-check  text-green-300"></i> Email Support</li>
+                <li><i class="fa-solid fa-circle-check  text-green-300"></i> Basic Analytics</li>
+                <li> <i class="fa-solid fa-circle-check text-green-300"></i>Email Support</li>
+                <li> <i class="fa-regular fa-circle-xmark  text-red-300"></i>Email Support</li>
+              </ul>
+              <a href="#"
+                class="mt-8 block rounded-4xl bg-red-300 px-4 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400">Get
+                started</a>
+            </div>
+          </div>
+
+          <!-- Pricing Plan 2 -->
+          <div class="swiper-slide p-4">
+            <div
+              class="relative rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/10 sm:p-10 transition-transform duration-300 hover:scale-110">
+              <h3 class="text-base font-semibold text-sky-300">Pro</h3>
+              <p class="mt-4 flex items-baseline gap-x-2">
+                <span class="text-5xl font-semibold tracking-tight text-gray-800">$48.00</span>
+                <span class="text-base text-gray-700">/month</span>
+              </p>
+              <p class="mt-6 text-base text-gray-800">Great for growing businesses.</p>
+              <hr class="my-6 border-gray-200">
+              <ul class="mt-8 space-y-3 text-sm text-gray-700">
+                <li><i class="fa-solid fa-circle-check text-green-300"></i> 50 Products</li>
+                <li><i class="fa-solid fa-circle-check text-green-300"></i> 10,000 Subscribers</li>
+                <li><i class="fa-solid fa-circle-check  text-green-300"></i> Basic Analytics</li>
+                <li><i class="fa-solid fa-circle-check  text-green-300"></i> Email Support</li>
+                <li><i class="fa-solid fa-circle-check  text-green-300"></i> Basic Analytics</li>
+                <li> <i class="fa-solid fa-circle-check text-green-300"></i>Email Support</li>
+                <li> <i class="fa-regular fa-circle-xmark  text-red-300"></i>Email Support</li>
+              </ul>
+              <a href="#"
+                class="mt-8 block rounded-4xl bg-sky-300 px-4 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400">Get
+                started</a>
+            </div>
+          </div>
+
+          <!-- Pricing Plan 3 -->
+          <div class="swiper-slide p-4">
+            <div
+              class="relative rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/10 sm:p-10 transition-transform duration-300 hover:scale-110">
+              <h3 class="text-base font-semibold text-green-300">Enterprise</h3>
+              <p class="mt-4 flex items-baseline gap-x-2">
+                <span class="text-5xl font-semibold tracking-tight text-gray-800">$98.00</span>
+                <span class="text-base text-gray-700">/month</span>
+              </p>
+              <p class="mt-6 text-base text-gray-800">Dedicated support and infrastructure for large businesses.</p>
+              <hr class="my-6 border-gray-200">
+              <ul class="mt-8 space-y-3 text-sm text-gray-700">
+                <li><i class="fa-solid fa-circle-check text-green-300"></i> Unlimited Products</li>
+                <li><i class="fa-solid fa-circle-check text-green-300"></i> Unlimited Subscribers</li>
+                <li><i class="fa-solid fa-circle-check  text-green-300"></i> Basic Analytics</li>
+                <li><i class="fa-solid fa-circle-check  text-green-300"></i> Email Support</li>
+                <li><i class="fa-solid fa-circle-check  text-green-300"></i> Basic Analytics</li>
+                <li> <i class="fa-solid fa-circle-check text-green-300"></i>Email Support</li>
+                <li> <i class="fa-regular fa-circle-xmark  text-red-300"></i>Email Support</li>
+              </ul>
+              <a href="#"
+                class="mt-8 block rounded-4xl bg-green-300 px-4 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400">Get
+                started</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Swiper Navigation -->
+    
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- <section class="bg-white py-12">
+  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center px-6">
+    
+   
+    <div class="flex flex-col items-center text-center gap-4 p-8 shadow-lg rounded-xl bg-white transition-transform duration-300 hover:scale-110">
+      <img class="h-24 w-24 rounded-full" src="/img/Group 38535.png" alt="Profile" />
+      <div class="space-y-2">
+        <p class="text-lg font-semibold text-black">Erin Lindford</p>
+        <p class="font-medium text-gray-500">Product Engineer</p>
+        <button class="border border-purple-500 text-purple-600 px-4 py-2 rounded-md hover:bg-purple-600 hover:text-white transition">
+          Message
+        </button>
+      </div>
+    </div>
+
+   
+    <div class="flex flex-col items-center text-center gap-4 p-8 shadow-lg rounded-xl bg-white transition-transform duration-300 hover:scale-110">
+      <img class="h-24 w-24 rounded-full" src="/img/Group 39778.png" alt="Profile" />
+      <div class="space-y-2">
+        <p class="text-lg font-semibold text-black">Erin Lindford</p>
+        <p class="font-medium text-gray-500">Product Engineer</p>
+        <button class="border border-purple-500 text-purple-600 px-4 py-2 rounded-md hover:bg-purple-600 hover:text-white transition">
+          Message
+        </button>
+      </div>
+    </div>
+
+ 
+    <div class="flex flex-col items-center text-center gap-4 p-8 shadow-lg rounded-xl bg-white transition-transform duration-300 hover:scale-110">
+      <img class="h-24 w-24 rounded-full" src="/img/Group 39946.png" alt="Profile" />
+      <div class="space-y-2">
+        <p class="text-lg font-semibold text-black">Erin Lindford</p>
+        <p class="font-medium text-gray-500">Product Engineer</p>
+        <button class="border border-purple-500 text-purple-600 px-4 py-2 rounded-md hover:bg-purple-600 hover:text-white transition">
+          Message
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+
+  <section class=" bg-sky-300 bg-gradient-to-tr from-[#19B5FE] to-[#52DBB7] p-12 "
+    style="background-image: url('img/Group 38634.png');">
+
+    <div class="text-center">
+      <div class="container mx-auto px-4 p-12">
+        <h1 class="text-3xl font-bold mb-2 text-white pt-12">Nemo enim ipsam voluptatem quia voluptas sit</h1>
+        <p class="text-lg mb-4 text-white">aspermatur aut odit aut fugit, sed quia</p>
+        <a href="#"
+          class="inline-block bg-white text-blue-600 rounded-3xl px-6 py-4 font-semibold hover:bg-blue-50 transition duration-300">Get
+          started for free &gt;</a>
+      </div>
+    </div>
+  </section>
+  <!-- Main Content Section -->
+
+
+<!-- Footer Section -->
+<footer class="bg-gray-200 text-black py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center lg:text-left">
+
+      <!-- Brand Section -->
+      <div class="flex flex-col items-center lg:items-start py-2">
+        <a href="#" class="">
+          <span class="sr-only">AutomateLI</span>
+          <img class="h-8 w-auto mx-auto lg:mx-0" src="img/logo.svg" alt="Logo">
+        </a>
+        <h3 class="font-bold text-1xl mt-4 leading-relaxed text-center">
+          Grow your business with AutomateLI ads management
+        </h3>
+        <p class="mt-4 text-sm text-gray-600">© 2025 AutomateLI. All rights reserved.</p>
+      </div>
+
+      <!-- Navigation Column -->
+      <div>
+        <h3 class="font-bold text-xl mb-4">Navigation</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-blue-500 transition duration-300">How It Works</a></li>
+          <li><a href="#" class="hover:text-blue-500 transition duration-300">Innovation</a></li>
+          <li><a href="#" class="hover:text-blue-500 transition duration-300">Pricing</a></li>
+        </ul>
+      </div>
+
+      <!-- Company Column -->
+      <div>
+        <h3 class="font-bold text-xl mb-4">Company</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-blue-500 transition duration-300">About Us</a></li>
+          <li><a href="#" class="hover:text-blue-500 transition duration-300">Careers</a></li>
+          <li><a href="#" class="hover:text-blue-500 transition duration-300">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Column -->
+      <div class="lg:flex-col">
+        <h3 class="font-bold text-xl mb-4">Follow Us</h3>
+        <ul class="flex space-x-4 justify-center lg:justify-start">
+          <li>
+            <a href="#" class="hover:text-blue-500 transition duration-300">
+              <i class="fab fa-facebook text-2xl"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-blue-500 transition duration-300">
+              <i class="fab fa-pinterest text-2xl"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-blue-500 transition duration-300">
+              <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<!-- Add FontAwesome for icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+
+
+
+
+  <!-- Swiper JS -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Initialize Swiper
+      const swiper = new Swiper(".swiperlogo", {
+        slidesPerView: 3, // Default for mobile
+        spaceBetween: 5, // 5px gap
+        loop: true, // Circular sliding
+        autoplay: {
+          delay: 2000, // Auto-slide every 2 seconds
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 3, // 3 slides for mobile
+          },
+          768: {
+            slidesPerView: 4, // 4 slides for tablets
+          },
+          1024: {
+            slidesPerView: 4, // 4 slides for desktops
+          },
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    });
+  </script>
+  <!-- Include Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="src/script.js"></script>
+  <script src="src/tailwind.config.js"></script>
+  <script src="font/js/all.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+
+</html>
