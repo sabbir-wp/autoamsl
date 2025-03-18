@@ -108,6 +108,8 @@
                 <a href="#" onclick="logout()" class="text-red-500 dark:text-red-400">Sign Out</a>
               </div>
             </div>
+
+            
           </div>
         </div>
       </div>
@@ -703,7 +705,26 @@
       initDarkMode();
       
       // Add event listeners for dropdowns
-      document.getElementById('notificationBtn').addEventListener('click', showNotifications);
+      document.getElementById('notificationBtn').addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent event from bubbling up to document
+    const notificationsDropdown = document.getElementById('notificationsDropdown');
+    notificationsDropdown.classList.toggle('show'); // Toggle 'show' class to show/hide dropdown
+  });
+
+  document.getElementById('settingsBtn').addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent event from bubbling up to document
+    const showSettings = document.getElementById('showSettings');
+    showSettings.classList.toggle('show'); // Toggle 'show' class to show/hide dropdown
+  });
+
+  document.getElementById('userMenuBtn').addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent event from bubbling up to document
+    const showUserMenu = document.getElementById('showUserMenu');
+    showUserMenu.classList.toggle('show'); // Toggle 'show' class to show/hide dropdown
+  });
+
+
+
       document.getElementById('settingsBtn').addEventListener('click', showSettings);
       document.getElementById('userMenuBtn').addEventListener('click', showUserMenu);
       document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
@@ -831,6 +852,7 @@
       document.getElementById('settingsDropdown').classList.remove('show');
       document.getElementById('userMenuDropdown').classList.remove('show');
     }
+    
     
     // Show all notifications
     function showAllNotifications() {
